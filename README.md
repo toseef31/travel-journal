@@ -23,3 +23,10 @@ git clone https://github.com/toseef31/travel-journal
 cd travel-journal
 npm install
 ```
+## 🛠️ Run
+---
+npm run dev
+
+---
+
+<img width="1320" height="858" alt="image" src="https://github.com/user-attachments/assets/f415da71-91c8-45a2-a1c1-204e69ace94d" />
