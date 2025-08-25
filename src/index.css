@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer components {
+  .app {
+    @apply relative h-[calc(100vh-40px)] w-11/12 md:w-10/12 lg:w-8/12 mx-auto border border-gray-200 shadow-md shadow-gray-200 rounded-md p-2 my-5 overflow-auto;
+  }
+  .card-container {
+    @apply grid grid-cols-12 justify-start items-center gap-3 my-4;
+  }
+  .image-container {
+    @apply col-span-12 md:col-span-4 w-full h-[200px] overflow-hidden rounded-md;
+  }
+}
