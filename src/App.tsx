@@ -1,21 +1,19 @@
-import Header from "@/components/Header";
-import TravelCard from "./components/TravelCard";
-import { travelingList } from "@/assets/data/travel-list";
-import type { Travel } from "@/assets/types/Travel";
+import { Routes, Route } from "react-router-dom";
+import PlaceDetails from "@/components/PlaceDetails";
+import Home from "@/pages/Home";
+import Header from "./components/Header";
+import AddPlace from "./components/AddPlace";
 
 function App() {
   return (
     <div className="app">
       <Header />
-      {
-        travelingList.map((travel: Travel, index: number) => (<>
-          <TravelCard key={travel.id} {...travel} />
-          {index === travelingList.length - 1 ? null : (
-            <div className="bg-green-100 h-1 w-11/12 mx-auto rounded-full"></div>
-          )}
-        </>
-        ))
-      }
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/places/:id" element={<PlaceDetails />} />
+        <Route path="/add-place" element={<AddPlace />} />
+      </Routes>
     </div>
   )
 }

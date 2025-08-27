@@ -1,10 +1,11 @@
 import { Travel } from "@/assets/types/Travel";
 import LocationPin from "./icons/LocationPin";
+import { Link } from "react-router-dom";
 
 export default function TravelCard(props: Travel) {
   const { title, description, imageUrl, location, googleMapsUrl, startDate, endDate } = props;
   return (
-    <div className="card-container">
+    <div className="card-container" onClick={() => { console.log("clicking on the item", props.id) }}>
       <div className="image-container">
         <img
           src={imageUrl}
@@ -17,9 +18,10 @@ export default function TravelCard(props: Travel) {
           <LocationPin />
           <span className="font-bold uppercase me-3">{location}</span>
           <a href={googleMapsUrl} target="_blank"
+            onClick={(e) => e.stopPropagation()}
             className="text-light text-xs underline hover:text-blue-500">View on Google Maps</a>
         </div>
-        <h2 className="text-3xl font-semibold mb-2">{title}</h2>
+        <Link to={`/places/${props.id}`} className="text-3xl font-semibold block mb-2">{title}</Link>
         <h3 className="text-sm font-semibold">{startDate} - {endDate}</h3>
         <p className="text-sm">{description}</p>
       </div>
