@@ -12,10 +12,10 @@
   }
 
   .text-input {
-    @apply w-full h-10 px-2 inline-block text-lg outline-gray-300 outline-2 rounded-md focus:outline-gray-600;
+    @apply w-full h-10 px-2 inline-block text-lg outline-gray-300 outline-2 rounded-sm focus:outline-gray-600;
   }
 
   .general-btn {
-    @apply inline-block w-full py-3 bg-rose-500 rounded-md border-1 border-rose-100 text-white text-lg font-semibold cursor-pointer active:bg-rose-800;
+    @apply inline-block w-full py-3 bg-rose-500 rounded-md border-1 border-rose-100 text-white text-lg font-semibold cursor-pointer hover:bg-rose-600 active:bg-rose-800;
   }
 }

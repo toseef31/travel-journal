@@ -26,7 +26,7 @@ export default function PlaceDetails() {
     </>
   )
 }
-// { tra.title } { location.pathname }
+
 
 
 

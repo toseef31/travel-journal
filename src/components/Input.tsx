@@ -1,6 +1,6 @@
 type TextInputProps = {
   label: string,
-  inputType: string | 'text',
+  inputType: 'text' | 'date' | 'password' | 'url' | 'email' | 'number',
   placeholder: string,
   value: string;
   onChange: (value: string) => void;
